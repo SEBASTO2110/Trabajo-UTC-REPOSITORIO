@@ -660,14 +660,14 @@ html body .whatsapp-icon {
           background-image: url("../img/counter-bg.jpg");
           background-repeat: no-repeat;
           background-size: cover;
-          background-position: center;
+          background-position: top center;
           display: flex;
           justify-content: center;
           align-items: center;
           float: left;
-          padding: 60px 0;
+          padding: 80px 0 60px;
           width: 100%;
-          min-height: 200px;
+          min-height: 280px;
         }
        
         #mu-abtus-counter .mu-abtus-counter-area {

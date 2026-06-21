@@ -50,6 +50,8 @@
 
   <!-- Main style sheet -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Plyr (reproductor de video) -->
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -64,6 +66,35 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+  <style>
+    /* Fix 1: Eliminar círculo naranja (slick dot activo) que se superpone a los botones */
+    #mu-slider .slick-dots {
+      display: none !important;
+    }
+
+    .mu-slider-btn:focus,
+    .mu-slider-btn-outline:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    /* Fix 2: Línea naranja superior al hacer hover en cards de Eventos/Calendario/Noticias */
+    .mu-landing-hub-card {
+      border-top: 4px solid transparent;
+      transition: border-top-color 0.3s ease;
+    }
+
+    .mu-landing-hub-card:hover,
+    .mu-landing-hub-card--highlight {
+      border-top-color: #F27405;
+    }
+
+    /* Fix 5: Imagen SEDES sin recorte */
+    .mu-footer-banner {
+      object-fit: initial;
+      max-height: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -101,19 +132,24 @@
               <nav aria-label="Redes sociales">
                 <ul class="mu-top-social-nav">
                   <li>
-                    <a href="https://www.tiktok.com/@utcgeneral" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
-                        <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z" />
+                    <a href="https://www.tiktok.com/@utcgeneral" target="_blank" rel="noopener noreferrer"
+                      aria-label="TikTok">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
+                        class="bi bi-tiktok" viewBox="0 0 16 16">
+                        <path
+                          d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z" />
                       </svg>
                     </a>
                   </li>
                   <li>
-                    <a href="https://web.facebook.com/utc.general.3" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <a href="https://web.facebook.com/utc.general.3" target="_blank" rel="noopener noreferrer"
+                      aria-label="Facebook">
                       <span class="fa fa-facebook"></span>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.instagram.com/utcgeneral" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <a href="https://www.instagram.com/utcgeneral" target="_blank" rel="noopener noreferrer"
+                      aria-label="Instagram">
                       <span class="fa fa-instagram"></span>
                     </a>
                   </li>
@@ -182,7 +218,9 @@
               </ul>
             </li>
             <li><a href="Pagoenlinea.html">Pago en Línea</a></li>
-            <li><a href="https://site3.q10.com/login?ReturnUrl=%2F&aplentId=1d1261ae-7618-412d-9bc6-7300e1fd66a4">Plataforma Q10</a></li>
+            <li><a
+                href="https://site3.q10.com/login?ReturnUrl=%2F&aplentId=1d1261ae-7618-412d-9bc6-7300e1fd66a4">Plataforma
+                Q10</a></li>
             <li><a href="#" id="mu-search-icon"><i class="fa fa-search"></i></a>
             </li>
           </ul>
@@ -258,7 +296,8 @@
           <p>Programas técnicos laborales diseñados para el mercado actual y el desarrollo humano integral.</p>
           <div class="mu-slider-actions">
             <a href="Pagoenlinea.html" class="btn mu-slider-btn">Pago en Línea</a>
-            <a href="https://site3.q10.com/login?ReturnUrl=%2F&aplentId=1d1261ae-7618-412d-9bc6-7300e1fd66a4" class="btn mu-slider-btn-outline" target="_blank" rel="noopener noreferrer">Plataforma Q10</a>
+            <a href="https://site3.q10.com/login?ReturnUrl=%2F&aplentId=1d1261ae-7618-412d-9bc6-7300e1fd66a4"
+              class="btn mu-slider-btn-outline" target="_blank" rel="noopener noreferrer">Plataforma Q10</a>
           </div>
         </div>
       </div>
@@ -284,7 +323,8 @@
           </a>
         </div>
         <div class="col-xs-12 col-sm-4">
-          <a href="https://www.instagram.com/utcgeneral" class="mu-landing-action-card" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/utcgeneral" class="mu-landing-action-card" target="_blank"
+            rel="noopener noreferrer">
             <span class="mu-landing-action-icon"><i class="fa fa-instagram"></i></span>
             <h3>Redes Sociales</h3>
             <p>Síguenos en Instagram, Facebook y TikTok</p>
@@ -331,7 +371,9 @@
             <p>Consulta fechas importantes, períodos académicos y cronogramas institucionales.</p>
             <ul class="mu-landing-hub-list">
               <li><a href="blog-single.html">Documentación y calendarios</a></li>
-              <li><a href="https://site3.q10.com/SolicitudesInstitucionales/NuevaSolicitud?aplentId=1d1261ae-7618-412d-9bc6-7300e1fd66a4">Solicitudes académicas</a></li>
+              <li><a
+                  href="https://site3.q10.com/SolicitudesInstitucionales/NuevaSolicitud?aplentId=1d1261ae-7618-412d-9bc6-7300e1fd66a4">Solicitudes
+                  académicas</a></li>
             </ul>
             <a href="blog-single.html" class="btn mu-landing-hub-btn">Ver calendario</a>
           </article>
@@ -372,7 +414,8 @@
                 <div class="mu-service-single">
                   <span class="fa fa-users"></span>
                   <h3>Formación Presencial</h3>
-                  <p>Nuestro Grupo de docentes, te esperan para brindarles capacitación de calidad pensando en el desarrollo
+                  <p>Nuestro Grupo de docentes, te esperan para brindarles capacitación de calidad pensando en el
+                    desarrollo
                     del talento humano, el ser y el saber hacer. </p>
                 </div>
               </div>
@@ -380,7 +423,8 @@
                 <div class="mu-service-single">
                   <span class="fa fa-table"></span>
                   <h3>Nuestros Salones de clase</h3>
-                  <p>Nuestras aulas de clases estan disponibles para el crecimiento de nuestros estudiantes, contamos con
+                  <p>Nuestras aulas de clases estan disponibles para el crecimiento de nuestros estudiantes, contamos
+                    con
                     laboratorios adecuados para cada proceso de formación</p>
                 </div>
               </div>
@@ -406,8 +450,8 @@
                 </div>
                 <!-- Video -->
                 <div class="mu-about-us-video mu-responsive-video">
-                  <video controls>
-                    <source src="/assets/video/PORQUE ELEGIR LA UTC.mp4" type="video/mp4">
+                  <video controls playsinline id="player2">
+                    <source src="assets/video/Elegir-UTC.mp4" type="video/mp4" size="720">
                   </video>
                 </div>
               </div>
@@ -595,7 +639,8 @@
                       humano.</p>
                     <a href="course.html">Leer Más</a>
                   </div>
-|                </div>
+                  |
+                </div>
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                   <div class="mu-single-feature">
                     <span class="fa fa-users custom-color"></span>
@@ -670,8 +715,7 @@
 
   <div class="containervideo">
     <div class="mu-responsive-video">
-      <video controls crossorigin playsinline id="player"
-        poster="assets/video/icontec_miniatura.png">
+      <video controls crossorigin playsinline id="player" poster="assets/video/icontec_miniatura.png">
         <!-- Video files -->
         <source src="assets/video/icontec.mp4" type="video/mp4" size="576">
         <source src="assets/video/icontec.mp4" type="video/mp4" size="720">
@@ -916,11 +960,6 @@
                   <div class="mu-our-teacher-single">
                     <figure class="mu-our-teacher-img">
                       <img src="assets/img/teachers/teacher-01.png" alt="teacher img">
-                      <div class="mu-our-teacher-social">
-                        <a href="https://wa.me/573022404669"><span class="fa fa-whatsapp" aria-hidden="true"
-                            style="color: white; font-size: 24px;"></span></a>
-
-                      </div>
                     </figure>
                     <!-- Modificado por orden de talento Humano, se retiran los nombres del h4 y se modifican las img sin fotografias -->
                     <div class="mu-ourteacher-single-content">
@@ -935,10 +974,6 @@
                   <div class="mu-our-teacher-single">
                     <figure class="mu-our-teacher-img">
                       <img src="assets/img/teachers/teacher-02.png" alt="teacher img">
-                      <div class="mu-our-teacher-social">
-                        <a href="https://wa.me/573153425523"><span class="fa fa-whatsapp" aria-hidden="true"
-                            style="color: white; font-size: 24px;"></span></a>
-                      </div>
                     </figure>
                     <div class="mu-ourteacher-single-content">
                       <h4></h4>
@@ -951,10 +986,6 @@
                   <div class="mu-our-teacher-single">
                     <figure class="mu-our-teacher-img">
                       <img src="assets/img/teachers/teacher-03.png" alt="teacher img">
-                      <div class="mu-our-teacher-social">
-                        <a href="https://wa.me/573102036595"><span class="fa fa-whatsapp" aria-hidden="true"
-                            style="color: white; font-size: 24px;"></span></a>
-                      </div>
                     </figure>
 
                     <div class="mu-ourteacher-single-content">
@@ -968,10 +999,6 @@
                   <div class="mu-our-teacher-single">
                     <figure class="mu-our-teacher-img">
                       <img src="assets/img/teachers/teacher-04.png" alt="teacher img">
-                      <div class="mu-our-teacher-social">
-                        <a href="https://wa.me/573176475878"><span class="fa fa-whatsapp" aria-hidden="true"
-                            style="color: white; font-size: 24px;"></span></a>
-                      </div>
                     </figure>
 
 
@@ -1093,6 +1120,9 @@
   <script src="assets/js/custom.js"></script>
 
 
+  <!-- Plyr (reproductor de video) -->
+  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+
   <!-- Custom js -->
   <script src="assets/js/video.js"></script>
 
@@ -1179,4 +1209,3 @@
 </body>
 
 </html>
-

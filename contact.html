@@ -118,7 +118,7 @@
   
 <!-- Start menu -->
 <section id="mu-menu">
-  <nav class="navbar navbar-default" role="navigation">  
+  <nav class="navbar navbar-default" role="navigation">
     <div class="container">
       <div class="navbar-header">
         <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
@@ -129,21 +129,10 @@
           <span class="icon-bar"></span>
         </button>
         <!-- LOGO -->
-       <div style="display: inline-block; text-align: justify;">
-            <a class="navbar-brand" href="index.html" style="display: inline-block;">
-            <img src="assets/img/logobanner.jpg" style="width: 190px;display: block; margin: 0 auto; /* Utilizando vw (viewport width) para el ancho */height: auto; /* Altura automática para mantener la proporción */max-width:300%; /* Evita que el logo se desborde en dispositivos pequeños */vertical-align: middle; /* Alineación vertical */float: left; /* Mueve la imagen hacia la izquierda */
-                margin-top: -10px; /* Ajuste del margen superior */>
-          </a>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        </section>
-
- 
-      
+        <a class="navbar-brand mu-navbar-brand" href="index.html">
+          <img src="assets/img/logobanner.jpg" class="mu-brand-logo" alt="Unidades Técnicas de Colombia">
+        </a>
+      </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
           <li class="active"><a href="index.html">Inicio</a></li>            
@@ -476,6 +465,29 @@
             searchPopup.classList.toggle('show');
         });
     });
+</script>
+<script>
+(function () {
+  var fbVideos = [].slice.call(document.querySelectorAll('iframe[src*="facebook.com/plugins/video"]'));
+  if (!fbVideos.length) return;
+  window.addEventListener('message', function (e) {
+    if (!e.origin || e.origin.indexOf('facebook.com') === -1) return;
+    var data;
+    try { data = typeof e.data === 'string' ? JSON.parse(e.data) : e.data; } catch (_) { return; }
+    if (!data) return;
+    var type = (data.type || data.action || data.msg_type || '').toString();
+    if (!/stop|end|finish/i.test(type)) return;
+    fbVideos.forEach(function (iframe) {
+      try {
+        if (iframe.contentWindow === e.source) {
+          var src = iframe.src;
+          iframe.src = '';
+          setTimeout(function () { iframe.src = src; }, 100);
+        }
+      } catch (_) {}
+    });
+  });
+})();
 </script>
   </body>
 </html>
