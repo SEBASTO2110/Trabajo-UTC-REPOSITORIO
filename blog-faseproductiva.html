@@ -24,11 +24,57 @@
               .mu-search-popup {
                 display: none;
               }
-            
+
               /* Estilo para mostrar el formulario cuando se hace clic */
               .mu-search-popup.show {
                 display: block;
               }
+        </style>
+
+        <style>
+          /* ── Tarjetas de descarga Fase Productiva ── */
+          .fp-cards-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+            padding: 30px 0 40px;
+          }
+          .fp-download-card {
+            flex: 1 1 220px;
+            max-width: 280px;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 32px 20px 28px;
+            text-align: center;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+          }
+          .fp-download-card .fp-icon {
+            font-size: 2.4rem;
+            color: #03A688;
+            margin-bottom: 14px;
+          }
+          .fp-download-card h3 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #333;
+            line-height: 1.5;
+            margin: 0 0 20px;
+            text-transform: uppercase;
+          }
+          .fp-btn {
+            display: inline-block;
+            background: #F27405;
+            color: #fff !important;
+            padding: 9px 22px;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 13px;
+            text-decoration: none !important;
+            transition: background 0.2s;
+          }
+          .fp-btn:hover { background: #03A688; }
         </style>
     <!-- Bootstrap -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">  
@@ -269,41 +315,32 @@
       </div>
     </div>
 
-    <div class="row" style="margin: 0 -15px;">
-      <div class="col-md-3">
-        <div class="btn-bg bg-1">
-          <div class="btn btn-1">
-            <h3>OPCIONES DE CERTIFICACIÓN</h3>
-            <a href="assets/Documentos/opcionesdecertificacion_utc.pdf" download="Certificacion">
-              <button type="button">Descargar aquí</button>
-            </a>
-          </div>
-        </div>
+    <div class="fp-cards-row">
+
+      <div class="fp-download-card">
+        <div class="fp-icon"><i class="fa fa-certificate"></i></div>
+        <h3>Opciones de Certificación</h3>
+        <a href="assets/Documentos/opcionesdecertificacion_utc.pdf" download="Certificacion" class="fp-btn">
+          <i class="fa fa-download"></i> Descargar aquí
+        </a>
       </div>
 
-      <div class="col-md-3">
-        <div class="btn-bg bg-2">
-          <div class="btn btn-2">
-            <h3>REGLAMENTO ESTUDIANTIL</h3>
-            <a href="assets/Documentos/reglamentoestudiantil_utc.pdf" download="Reglamento">
-              <button type="button">Descargar aquí</button>
-            </a>
-          </div>
-        </div>
+      <div class="fp-download-card">
+        <div class="fp-icon"><i class="fa fa-book"></i></div>
+        <h3>Reglamento Estudiantil</h3>
+        <a href="assets/Documentos/reglamentoestudiantil_utc.pdf" download="Reglamento" class="fp-btn">
+          <i class="fa fa-download"></i> Descargar aquí
+        </a>
       </div>
 
-      <div class="col-md-3">
-        <div class="btn-bg bg-3">
-          <div class="btn btn-3">
-            <h3>FORMATO - HOJA DE VIDA </h3>
-            <a href="assets/Documentos/formatohojadevida_utc.doc" download="HDV">
-              <button type="button">Descargar aquí</button>
-            </a>
-          </div>
-        </div>
+      <div class="fp-download-card">
+        <div class="fp-icon"><i class="fa fa-id-card"></i></div>
+        <h3>Formato - Hoja de Vida</h3>
+        <a href="assets/Documentos/formatohojadevida_utc.doc" download="HDV" class="fp-btn">
+          <i class="fa fa-download"></i> Descargar aquí
+        </a>
       </div>
 
-      
     </div>
   </div>
 </section>
